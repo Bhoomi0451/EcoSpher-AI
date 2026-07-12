@@ -44,7 +44,7 @@ const NotificationCard = ({ notification, onRead }) => {
               {title || 'System Alert'}
             </h4>
             <span className="text-[10px] text-slate-400 dark:text-slate-500 whitespace-nowrap pl-2">
-              {formatDate(createdAt, { hour: '2-digit', minute: '2-digit' })}
+              {formatDate(createdAt, { hour: '2-digit', minute: '2-digit' }) || createdAt}
             </span>
           </div>
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">

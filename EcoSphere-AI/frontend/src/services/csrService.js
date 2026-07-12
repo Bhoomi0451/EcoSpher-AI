@@ -20,6 +20,14 @@ const csrService = {
       },
     });
     return response.data;
+  },
+
+  /**
+   * Get employee and department ESG dashboard statistics
+   */
+  getDashboardStats: async () => {
+    const response = await axios.get(`${API_BASE_URL}/csr/dashboard-stats`);
+    return response.data;
   }
 };
 
