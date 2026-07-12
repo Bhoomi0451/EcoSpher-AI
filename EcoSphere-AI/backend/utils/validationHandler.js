@@ -1,18 +1,6 @@
 import { validationResult } from "express-validator";
 
 /**
- * Validation Handler Middleware
- *
- * Reads the result of express-validator chains attached to a route.
- * If validation errors exist:
- *   - Responds with HTTP 400 and a structured error array.
- *   - Stops further request processing (controller is never called).
- * If validation passes:
- *   - Calls next() to proceed to the controller.
- *
- * Usage:
- *   router.post("/register", registerValidator, handleValidation, registerUser);
- *
  * @param {import("express").Request}  req
  * @param {import("express").Response} res
  * @param {import("express").NextFunction} next
@@ -34,7 +22,6 @@ const handleValidation = (req, res, next) => {
     });
   }
 
-  // Validation passed — proceed to next middleware / controller
   next();
 };
 
